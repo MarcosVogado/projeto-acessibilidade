@@ -53,7 +53,7 @@ export class ListaLivrosComponent implements AfterViewInit{
     map((resultado) => resultado.items ?? []),
     map((items) => this.livrosResultadoParaLivros(items)),
     catchError(() => {
-      this.mensagemErro = 'Ops, ocorreu um erro. Recarregue a aplicação!';
+      this.mensagemErro = 'Ops! Ocorreu um erro. Recarregue a aplicação imediatamente.';
       return throwError(() => new Error(this.mensagemErro));
     })
   );
