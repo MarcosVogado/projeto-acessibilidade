@@ -10,7 +10,9 @@
       <dt class="informacoes">Editora:</dt>
       <dd class="resultado">{{ livro.publisher | slice:0:20 }}</dd>
     </dl>
-    <button (click)="onModalChange(true)">Mais detalhes</button>
+    <button (click)="onModalChange(true)"
+    aria-label="Mais detalhes"
+    >Mais detalhes</button>
   </section>
 </article>
 @if (modalAberto) {
